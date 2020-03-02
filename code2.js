@@ -36,10 +36,13 @@ let play = {
                 if (scoreMinus === 0) {
                     button.disabled = true;
                     document.querySelector('#win h1').innerHTML = 'You are lose.Try again'
+                } else {
+                    document.querySelector('#win h1').innerHTML = 'moves left: ' + scoreMinus;
                 }
 
                 letters.push(currentThis.text.value.toLowerCase())//выводим использованные буквы
                 console.log(letters)
+
                 document.querySelector('#letters h1').innerHTML = 'Your letters: ' + letters.join(' ');
 
                 let textValue = currentThis.text.value.toLowerCase();
